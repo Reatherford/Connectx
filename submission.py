@@ -1,5 +1,6 @@
 import inspect
 import os
+from bot2jason import my_agent
 
 def write_agent_to_file(function, file):
     with open(file, "a" if os.path.exists(file) else "w") as f:
