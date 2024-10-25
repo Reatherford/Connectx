@@ -131,7 +131,7 @@ class AI:
             else:  # Depth is zero
                 return (None, self.score_position(game.board))
         if maximizing_player:
-            value = -np.Inf
+            value = -np.inf
             column = random.choice(valid_locations)
             for col in valid_locations:
                 game_copy = Connect4()
@@ -147,7 +147,7 @@ class AI:
             return column, value
 
         else:  # Minimizing player
-            value = np.Inf
+            value = np.inf
             column = random.choice(valid_locations)
             for col in valid_locations:
                 game_copy = Connect4()
@@ -164,7 +164,7 @@ class AI:
             return column, value
 
     def get_best_move(self, game, depth=4):
-        column, _ = self.minimax(game, depth, -np.Inf, np.Inf, True)
+        column, _ = self.minimax(game, depth, -np.inf, np.inf, True)
         return column
 
 def play_game():
